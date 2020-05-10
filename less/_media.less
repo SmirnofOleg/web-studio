@@ -1,0 +1,212 @@
+@media (max-width: 1540px) {
+	.content .title .h1 .line {
+		display: none;
+	}
+}
+
+@media (max-width: 914px) {
+	.menu-open {
+		position: absolute;
+		transform: translateX(480px);
+		margin-left: 115px;
+		transition: 0.3s;
+		width: 100%;
+		background-color: @bg-nav;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.menu-btn {
+		display: block;
+	}
+
+	.my-menu {
+		position: absolute;
+		width: 100%;
+		margin-left: 115px;
+		left: -480px;
+		border-right: none;
+
+		&:before {
+			opacity: 0;
+		}
+
+		.social {
+			position: relative;
+			flex-direction: row;
+			left: 0;
+			top: 0%;
+			padding-left: 80px;
+			margin-top: 20px;
+
+			.fab {
+				font-size: 48px;
+			}
+		}
+
+		.logo {
+			position: relative;
+			text-align: left;
+			left: 8%;
+			bottom: 0%;
+			margin-top: 20px;
+
+		}
+	}
+
+	.content {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.my-menu {
+		flex: 1;
+	}
+
+	.content {
+		flex: 2;
+
+		.title {
+			.h1 {
+				h1 {
+					font-size: 90px;
+				}
+			}
+
+			.line {
+				display: none;
+			}
+
+			.preload {
+				.item {
+					font-size: 60px;
+				}
+			}
+		}
+
+		.top-header {
+			height: 157px;
+		}
+	}
+}
+
+@media (max-width: 554px) {
+	.preload {
+		font-size: 36px;
+		text-align: center;
+
+		.item {
+			font-size: 36px;
+		}
+	}
+
+	.content {
+		.title {
+			.h1 {
+				h1 {
+					font-size: 36px;
+				}
+			}
+
+			.line {
+				display: none;
+			}
+
+			.preload {
+				.item {
+					font-size: 36px;
+				}
+			}
+
+			p {
+				font-size: 12px;
+			}
+
+			.cube {
+				width: 115px;
+				height: 115px;
+				top: -10%;
+			}
+
+			.btn {
+				margin-top: 80px;
+			}
+		}
+	}
+}
+
+@media (max-width: 370px) {
+	.menu-btn {
+		left: 0%;
+	}
+
+	.my-menu {
+		margin-left: 70px;
+		width: 80%;
+	}
+}
+
+@media (max-width: 375px) {
+	.content {
+		.title {
+			&__btn {
+				margin-top: 100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.content {
+		.title {
+			&__btn {
+				margin-top: 85px;
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.my-menu {
+		.logo {
+			text-align: center;
+			left: 0%;
+
+			img {
+				width: 170px;
+				height: 50px;
+			}
+		}
+	}
+
+	.preload {
+		.item {
+			font-size: 30px;
+		}
+	}
+
+	.content {
+		.title {
+			margin-top: 70px;
+		}
+
+		.top-header {
+			justify-content: center;
+
+			.lang {
+				margin-left: 60px;
+			}
+		}
+	}
+
+	.phone {
+		display: none;
+	}
+
+	.my-menu {
+		margin-left: 60px;
+	}
+}

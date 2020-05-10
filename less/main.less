@@ -1,0 +1,448 @@
+@import "_vars";
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap&subset=cyrillic,cyrillic-ext");
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.eot");
+  src: local("Montserrat-Regular"), local("Montserrat-Regular"),
+    url("../fonts/Montserrat/Montserrat-Regular.eot") format("embedded-opentype"),
+    url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Extra";
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot");
+  src: local("Montserrat-Regular"), local("Montserrat-ExtraBold"),
+    url("../fonts/Montserrat/Montserrat-ExtraBold.eot") format("embedded-opentype"),
+    url("../fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
+  src: local("Montserrat-Regular"), local("Montserrat-Bold"),
+    url("../fonts/Montserrat/Montserrat-Bold.eot") format("embedded-opentype"),
+    url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Montserrat";
+}
+
+body {
+  line-height: 1;
+  font-family: "Montserrat";
+  margin: auto;
+  color: #1a1a18;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@import "blocks/_nav";
+
+.page {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background: url(/images/bg.png) no-repeat 100% 100%;
+  background-size: cover;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 10%;
+  left: -25px;
+  top: 50%;
+  height: 12%;
+  z-index: 1000;
+  background-color: @bg-nav;
+  border-radius: 20px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    padding: 0 10px;
+    z-index: 100;
+    background-color: @bg-nav;
+    text-decoration: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.55;
+  }
+}
+
+.fab {
+  font-size: 36px;
+  z-index: 100;
+  color: @text;
+  transition: ease 0.3s;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.preload {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 11;
+  font-weight: 800;
+  font-size: 100px;
+
+  .item {
+    font-size: 100px;
+    position: absolute;
+    transition: 0.2s;
+    color: #fff;
+  }
+}
+
+.el1 {
+  animation: show 0.7s ease-in-out;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.el2 {
+  animation: show 0.7s ease-in-out;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+.el3 {
+  animation: show 0.7s ease-in-out;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+.el4 {
+  animation: show 0.7s ease-in-out;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*content*/
+.content-hide {
+  opacity: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+
+  .top-header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    line-height: 200px;
+    justify-content: flex-end;
+
+    .lang {
+      display: block;
+
+      a {
+        padding: 15px 25px;
+        color: @text;
+        transition: 0.3s;
+
+        &:hover {
+          color: #fff;
+        }
+
+        &:first-child {
+          border-right: 1px solid @text;
+        }
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: @text;
+      padding-right: 15px;
+      transition: 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+
+      .icons {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        border: 1px solid @text;
+      }
+    }
+  }
+
+  .title {
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    margin-top: 180px;
+
+    .h1 {
+      display: block;
+      text-transform: uppercase;
+      width: 100%;
+      z-index: 11;
+      animation-delay: 3s;
+
+      .line {
+        position: absolute;
+        height: 1px;
+        right: 0;
+        top: 15%;
+        background-color: @text;
+        width: 15%;
+      }
+
+      h1 {
+        font-size: 110px;
+        font-weight: 800;
+        // animation: shift 2s ease-in-out infinite alternate;
+        animation-delay: 5s;
+        // opacity: 0;
+        transform: scaleY(1);
+      }
+
+      /* glitch effect*/
+      @keyframes shift {
+
+        0%,
+        40%,
+        44%,
+        58%,
+        61%,
+        65%,
+        69%,
+        73%,
+        100% {
+          transform: skewX(0deg);
+          opacity: 1;
+        }
+
+        41% {
+          transform: skewX(10deg);
+        }
+
+        42% {
+          transform: skewX(-10deg);
+        }
+      }
+    }
+
+    p {
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 5px;
+      color: @text;
+      text-transform: uppercase;
+      z-index: 11;
+    }
+
+    .cube {
+      position: absolute;
+      background-color: @shadow;
+      width: 300px;
+      height: 300px;
+      top: -20%;
+      z-index: 10;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid @gray;
+      color: @gray;
+      transform: scale(1);
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background: #fff;
+      }
+
+      a {
+        display: block;
+        color: @gray;
+        padding: 10px 20px;
+        transform: scale(1);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+@import "_media";
